@@ -187,253 +187,254 @@
 185,"Gross enrolment ratio, primary, both sexes (%)"
 186,"Gross enrolment ratio, primary, gender parity index (GPI)"
 187,"Gross enrolment ratio, secondary, both sexes (%)"
-188,"Gross enrolment ratio, tertiary, both sexes (%)"
-189,"Gross enrolment ratio, tertiary, gender parity index (GPI)"
-190,Gross fixed capital formation (% of GDP)
-191,Gross fixed capital formation (annual % growth)
-192,Gross fixed capital formation (constant 2005 US$)
-193,"Gross intake ratio to Grade 1 of primary education, both sexes (%)"
-194,Gross national expenditure (% of GDP)
-195,Gross national expenditure (constant 2005 US$)
-196,Gross national expenditure deflator (base year varies by country)
-197,Gross savings (% of GDP)
-198,Gross savings (% of GNI)
-199,Gross value added at factor cost (constant 2005 US$)
-200,"Health expenditure per capita, PPP (constant 2011 international $)"
-201,"Health expenditure, private (% of GDP)"
-202,"Health expenditure, public (% of GDP)"
-203,"Health expenditure, total (% of GDP)"
-204,High-technology exports (% of manufactured exports)
-205,"Hospital beds (per 1,000 people)"
-206,Household final consumption expenditure (annual % growth)
-207,Household final consumption expenditure (constant 2005 US$)
-208,Household final consumption expenditure per capita (constant 2005 US$)
-209,Household final consumption expenditure per capita growth (annual %)
-210,"Household final consumption expenditure, PPP (constant 2011 international $)"
-211,"Household final consumption expenditure, PPP (current international $)"
-212,"Household final consumption expenditure, etc. (% of GDP)"
-213,"Household final consumption expenditure, etc. (annual % growth)"
-214,"Household final consumption expenditure, etc. (constant 2005 US$)"
-215,ICT goods exports (% of total goods exports)
-216,ICT goods imports (% total goods imports)
-217,"ICT service exports (% of service exports, BoP)"
-218,Import value index (2000 = 100)
-219,Imports of goods and services (% of GDP)
-220,Improved sanitation facilities (% of population with access)
-221,"Improved sanitation facilities, rural (% of rural population with access)"
-222,"Improved sanitation facilities, urban (% of urban population with access)"
-223,Income share held by fourth 20%
-224,Income share held by highest 10%
-225,Income share held by highest 20%
-226,Income share held by lowest 10%
-227,Income share held by lowest 20%
-228,Income share held by second 20%
-229,Income share held by third 20%
-230,"Industry, value added (% of GDP)"
-231,"Industry, value added (annual % growth)"
-232,"Industry, value added (constant 2005 US$)"
-233,"Inflation, GDP deflator (annual %)"
-234,"Inflation, consumer prices (annual %)"
-235,Informal payments to public officials (% of firms)
-236,Insurance and financial services (% of commercial service exports)
-237,Insurance and financial services (% of commercial service imports)
-238,"Insurance and financial services (% of service exports, BoP)"
-239,"Insurance and financial services (% of service imports, BoP)"
-240,"Intentional homicides (per 100,000 people)"
-241,Interest payments (% of expense)
-242,Interest payments (% of revenue)
-243,"Interest rate spread (lending rate minus deposit rate, %)"
-244,International migrant stock (% of population)
-245,"International migrant stock, total"
-246,"International tourism, expenditures (% of total imports)"
-247,"International tourism, number of arrivals"
-248,"International tourism, number of departures"
-249,"International tourism, receipts (% of total exports)"
-250,Internationally-recognized quality certification (% of firms)
-251,Internet users (per 100 people)
-252,"Labor force participation rate for ages 15-24, total (%) (modeled ILO estimate)"
-253,"Labor force participation rate for ages 15-24, total (%) (national estimate)"
-254,"Labor force participation rate, total (% of total population ages 15+) (modeled ILO estimate)"
-255,"Labor force participation rate, total (% of total population ages 15+) (national estimate)"
-256,"Labor force participation rate, total (% of total population ages 15-64) (modeled ILO estimate)"
-257,Labor force with primary education (% of total)
-258,Labor force with secondary education (% of total)
-259,Labor force with tertiary education (% of total)
-260,Labor tax and contributions (% of commercial profits)
-261,"Lead time to export, median case (days)"
-262,"Lead time to import, median case (days)"
-263,Lending interest rate (%)
-264,"Life expectancy at birth, total (years)"
-265,Lifetime risk of maternal death (%)
-266,Lifetime risk of maternal death (1 in: rate varies by country)
-267,Liner shipping connectivity index (maximum value in 2004 = 100)
-268,"Listed domestic companies, total"
-269,Livestock production index (2004-2006 = 100)
-270,Logistics performance index: Overall (1=low to 5=high)
-271,Long-term unemployment (% of total unemployment)
-272,"Losses due to theft, robbery, vandalism, and arson (% sales)"
-273,Low-birthweight babies (% of births)
-274,"Lower secondary completion rate, both sexes (%)"
-275,Machinery and transport equipment (% of value added in manufacturing)
-276,Manufactures exports (% of merchandise exports)
-277,Manufactures imports (% of merchandise imports)
-278,"Manufacturing, value added (% of GDP)"
-279,"Manufacturing, value added (annual % growth)"
-280,"Manufacturing, value added (constant 2005 US$)"
-281,Marine protected areas (% of territorial waters)
-282,Market capitalization of listed domestic companies (% of GDP)
-283,Merchandise trade (% of GDP)
-284,Military expenditure (% of GDP)
-285,Military expenditure (% of central government expenditure)
-286,Mobile cellular subscriptions (per 100 people)
-287,"Mortality rate, infant (per 1,000 live births)"
-288,"Mortality rate, neonatal (per 1,000 live births)"
-289,"Mortality rate, under-5 (per 1,000)"
-290,Natural gas rents (% of GDP)
-291,Net barter terms of trade index (2000 = 100)
-292,"Net enrolment rate, primary, both sexes (%)"
-293,"Net enrolment rate, secondary, both sexes (%)"
-294,"Net incurrence of liabilities, domestic (% of GDP)"
-295,"Net incurrence of liabilities, foreign (% of GDP)"
-296,"Net intake rate to Grade 1 of primary education, both sexes (%)"
-297,"New business density (new registrations per 1,000 people ages 15-64)"
-298,"Nurses and midwives (per 1,000 people)"
-299,Official entrance age to lower secondary education (years)
-300,Official entrance age to primary education (years)
-301,Oil rents (% of GDP)
-302,Ores and metals exports (% of merchandise exports)
-303,Ores and metals imports (% of merchandise imports)
-304,Other expense (% of expense)
-305,Other manufacturing (% of value added in manufacturing)
-306,Other taxes payable by businesses (% of commercial profits)
-307,Out-of-pocket health expenditure (% of private expenditure on health)
-308,Out-of-pocket health expenditure (% of total expenditure on health)
-309,"Out-of-school children of primary school age, both sexes (number)"
-310,"Part time employment, total (% of total employment)"
-311,Percentage of enrolment in primary education in private institutions (%)
-312,Percentage of enrolment in secondary education in private institutions (%)
-313,"Percentage of repeaters in primary education, all grades, both sexes (%)"
-314,"Percentage of repeaters in secondary general education, all grades, both sexes (%)"
-315,Permanent cropland (% of land area)
-316,"Personal remittances, received (% of GDP)"
-317,"Point-of-sale terminals (per 100,000 adults)"
-318,Population ages 65 and above (% of total)
-319,Population density (people per sq. km of land area)
-320,Population growth (annual %)
-321,Population in largest city
-322,Population in the largest city (% of urban population)
-323,Population in urban agglomerations of more than 1 million (% of total population)
-324,Population living in areas where elevation is below 5 meters (% of total population)
-325,"Population, ages 0-14 (% of total)"
-326,"Population, ages 15-64 (% of total)"
-327,Price level ratio of PPP conversion factor (GDP) to market exchange rate
-328,"Primary completion rate, both sexes (%)"
-329,"Primary to secondary general education transition rate, both sexes (%)"
-330,Private credit bureau coverage (% of adults)
-331,Procedures to build a warehouse (number)
-332,Procedures to register property (number)
-333,Profit tax (% of commercial profits)
-334,Proportion of seats held by women in national parliaments (%)
-335,Public credit registry coverage (% of adults)
-336,Pump price for diesel fuel (US$ per liter)
-337,Pump price for gasoline (US$ per liter)
-338,Pupil-teacher ratio in primary education (headcount basis)
-339,Pupil-teacher ratio in secondary education (headcount basis)
-340,"Quality of port infrastructure, WEF (1=extremely underdeveloped to 7=well developed and efficient by international standards)"
-341,Rail lines (total route-km)
-342,"Railways, goods transported (million ton-km)"
-343,"Railways, passengers carried (million passenger-km)"
-344,Real effective exchange rate index (2010 = 100)
-345,Real interest rate (%)
-346,Renewable electricity output (% of total electricity output)
-347,Renewable energy consumption (% of total final energy consumption)
-348,Renewable internal freshwater resources per capita (cubic meters)
-349,"Renewable internal freshwater resources, total (billion cubic meters)"
-350,Research and development expenditure (% of GDP)
-351,Researchers in R&D (per million people)
-352,"Revenue, excluding grants (% of GDP)"
-353,"Risk premium on lending (lending rate minus treasury bill rate, %)"
-354,Rural population (% of total population)
-355,Rural population growth (annual %)
-356,S&P Global Equity Indices (annual % change)
-357,Scientific and technical journal articles
-358,"Self-employed, total (% of total employed)"
-359,"Services, etc., value added (% of GDP)"
-360,"Services, etc., value added (annual % growth)"
-361,"Services, etc., value added (constant 2005 US$)"
-362,"Share of tariff lines with international peaks, all products (%)"
-363,"Share of tariff lines with international peaks, manufactured products (%)"
-364,"Share of tariff lines with international peaks, primary products (%)"
-365,"Share of tariff lines with specific rates, all products (%)"
-366,"Share of tariff lines with specific rates, manufactured products (%)"
-367,"Share of tariff lines with specific rates, primary products (%)"
-368,Share of women in wage employment in the nonagricultural sector (% of total nonagricultural employment)
-369,"Share of youth not in education, employment, or training, total (% of youth population)"
-370,Social contributions (% of revenue)
-371,Start-up procedures to register a business (number)
-372,"Stocks traded, total value (% of GDP)"
-373,"Stocks traded, turnover ratio of domestic shares (%)"
-374,Strength of legal rights index (0=weak to 12=strong)
-375,Subsidies and other transfers (% of expense)
-376,"Survey mean consumption or income per capita, bottom 40% of population (2011 PPP $ per day)"
-377,"Survey mean consumption or income per capita, total population (2011 PPP $ per day)"
-378,"Survival rate to Grade 5 of primary education, both sexes (%)"
-379,"Survival rate to the last grade of primary education, both sexes (%)"
-380,"Tariff rate, applied, simple mean, all products (%)"
-381,"Tariff rate, applied, simple mean, manufactured products (%)"
-382,"Tariff rate, applied, simple mean, primary products (%)"
-383,"Tariff rate, applied, weighted mean, all products (%)"
-384,"Tariff rate, applied, weighted mean, manufactured products (%)"
-385,"Tariff rate, applied, weighted mean, primary products (%)"
-386,"Tariff rate, most favored nation, simple mean, all products (%)"
-387,"Tariff rate, most favored nation, simple mean, manufactured products (%)"
-388,"Tariff rate, most favored nation, simple mean, primary products (%)"
-389,"Tariff rate, most favored nation, weighted mean, all products (%)"
-390,"Tariff rate, most favored nation, weighted mean, manufactured products (%)"
-391,"Tariff rate, most favored nation, weighted mean, primary products (%)"
-392,Tax payments (number)
-393,Tax revenue (% of GDP)
-394,Taxes on goods and services (% of revenue)
-395,Taxes on goods and services (% value added of industry and services)
-396,"Taxes on income, profits and capital gains (% of revenue)"
-397,"Taxes on income, profits and capital gains (% of total taxes)"
-398,Taxes on international trade (% of revenue)
-399,"Teachers in primary education, both sexes (number)"
-400,"Teachers in secondary education, both sexes (number)"
-401,Technicians in R&D (per million people)
-402,Terrestrial and marine protected areas (% of total territorial area)
-403,Terrestrial protected areas (% of total land area)
-404,Textiles and clothing (% of value added in manufacturing)
-405,Theoretical duration of primary education (years)
-406,Theoretical duration of secondary education (years)
-407,Time required to build a warehouse (days)
-408,Time required to enforce a contract (days)
-409,Time required to get electricity (days)
-410,Time required to register property (days)
-411,Time required to start a business (days)
-412,Time spent dealing with the requirements of government regulations (% of senior management time)
-413,Time to export (days)
-414,Time to import (days)
-415,Time to prepare and pay taxes (hours)
-416,Time to resolve insolvency (years)
-417,Total natural resources rents (% of GDP)
-418,Total reserves in months of imports
-419,Total tax rate (% of commercial profits)
-420,Trade (% of GDP)
-421,Trade in services (% of GDP)
-422,Transport services (% of commercial service exports)
-423,Transport services (% of commercial service imports)
-424,"Transport services (% of service exports, BoP)"
-425,"Transport services (% of service imports, BoP)"
-426,Travel services (% of commercial service exports)
-427,Travel services (% of commercial service imports)
-428,"Travel services (% of service exports, BoP)"
-429,"Travel services (% of service imports, BoP)"
-430,"Unemployment, total (% of total labor force)"
-431,Unmet need for contraception (% of married women ages 15-49)
-432,Urban population (% of total)
-433,Urban population growth (annual %)
-434,"Vulnerable employment, total (% of total employment)"
-435,"Wage and salaried workers, total (% of total employed)"
-436,Wholesale price index (2010 = 100)
-437,"Youth literacy rate, population 15-24 years, both sexes (%)"
+188,"Gross enrolment ratio, secondary, gender parity index (GPI)"
+189,"Gross enrolment ratio, tertiary, bExports of goods and servicesoth sexes (%)"
+190,"Gross enrolment ratio, tertiary, gender parity index (GPI)"
+191,Gross fixed capital formation (% of GDP)
+192,Gross fixed capital formation (annual % growth)
+193,Gross fixed capital formation (constant 2005 US$)
+194,"Gross intake ratio to Grade 1 of primary education, both sexes (%)"
+195,Gross national expenditure (% of GDP)
+196,Gross national expenditure (constant 2005 US$)
+197,Gross national expenditure deflator (base year varies by country)
+198,Gross savings (% of GDP)
+199,Gross savings (% of GNI)
+200,Gross value added at factor cost (constant 2005 US$)
+201,"Health expenditure per capita, PPP (constant 2011 international $)"
+202,"Health expenditure, private (% of GDP)"
+203,"Health expenditure, public (% of GDP)"
+204,"Health expenditure, total (% of GDP)"
+205,High-technology exports (% of manufactured exports)
+206,"Hospital beds (per 1,000 people)"
+207,Household final consumption expenditure (annual % growth)
+208,Household final consumption expenditure (constant 2005 US$)
+209,Household final consumption expenditure per capita (constant 2005 US$)
+210,Household final consumption expenditure per capita growth (annual %)
+211,"Household final consumption expenditure, PPP (constant 2011 international $)"
+212,"Household final consumption expenditure, PPP (current international $)"
+213,"Household final consumption expenditure, etc. (% of GDP)"
+214,"Household final consumption expenditure, etc. (annual % growth)"
+215,"Household final consumption expenditure, etc. (constant 2005 US$)"
+216,ICT goods exports (% of total goods exports)
+217,ICT goods imports (% total goods imports)
+218,"ICT service exports (% of service exports, BoP)"
+219,Import value index (2000 = 100)
+220,Imports of goods and services (% of GDP)
+221,Improved sanitation facilities (% of population with access)
+222,"Improved sanitation facilities, rural (% of rural population with access)"
+223,"Improved sanitation facilities, urban (% of urban population with access)"
+224,Income share held by fourth 20%
+225,Income share held by highest 10%
+226,Income share held by highest 20%
+227,Income share held by lowest 10%
+228,Income share held by lowest 20%
+229,Income share held by second 20%
+230,Income share held by third 20%
+231,"Industry, value added (% of GDP)"
+232,"Industry, value added (annual % growth)"
+233,"Industry, value added (constant 2005 US$)"
+234,"Inflation, GDP deflator (annual %)"
+235,"Inflation, consumer prices (annual %)"
+236,Informal payments to public officials (% of firms)
+237,Insurance and financial services (% of commercial service exports)
+238,Insurance and financial services (% of commercial service imports)
+239,"Insurance and financial services (% of service exports, BoP)"
+240,"Insurance and financial services (% of service imports, BoP)"
+241,"Intentional homicides (per 100,000 people)"
+242,Interest payments (% of expense)
+243,Interest payments (% of revenue)
+244,"Interest rate spread (lending rate minus deposit rate, %)"
+245,International migrant stock (% of population)
+246,"International migrant stock, total"
+247,"International tourism, expenditures (% of total imports)"
+248,"International tourism, number of arrivals"
+249,"International tourism, number of departures"
+250,"International tourism, receipts (% of total exports)"
+251,Internationally-recognized quality certification (% of firms)
+252,Internet users (per 100 people)
+253,"Labor force participation rate for ages 15-24, total (%) (modeled ILO estimate)"
+254,"Labor force participation rate for ages 15-24, total (%) (national estimate)"
+255,"Labor force participation rate, total (% of total population ages 15+) (modeled ILO estimate)"
+256,"Labor force participation rate, total (% of total population ages 15+) (national estimate)"
+257,"Labor force participation rate, total (% of total population ages 15-64) (modeled ILO estimate)"
+258,Labor force with primary education (% of total)
+259,Labor force with secondary education (% of total)
+260,Labor force with tertiary education (% of total)
+261,Labor tax and contributions (% of commercial profits)
+262,"Lead time to export, median case (days)"
+263,"Lead time to import, median case (days)"
+264,Lending interest rate (%)
+265,"Life expectancy at birth, total (years)"
+266,Lifetime risk of maternal death (%)
+267,Lifetime risk of maternal death (1 in: rate varies by country)
+268,Liner shipping connectivity index (maximum value in 2004 = 100)
+269,"Listed domestic companies, total"
+270,Livestock production index (2004-2006 = 100)
+271,Logistics performance index: Overall (1=low to 5=high)
+272,Long-term unemployment (% of total unemployment)
+273,"Losses due to theft, robbery, vandalism, and arson (% sales)"
+274,Low-birthweight babies (% of births)
+275,"Lower secondary completion rate, both sexes (%)"
+276,Machinery and transport equipment (% of value added in manufacturing)
+277,Manufactures exports (% of merchandise exports)
+278,Manufactures imports (% of merchandise imports)
+279,"Manufacturing, value added (% of GDP)"
+280,"Manufacturing, value added (annual % growth)"
+281,"Manufacturing, value added (constant 2005 US$)"
+282,Marine protected areas (% of territorial waters)
+283,Market capitalization of listed domestic companies (% of GDP)
+284,Merchandise trade (% of GDP)
+285,Military expenditure (% of GDP)
+286,Military expenditure (% of central government expenditure)
+287,Mobile cellular subscriptions (per 100 people)
+288,"Mortality rate, infant (per 1,000 live births)"
+289,"Mortality rate, neonatal (per 1,000 live births)"
+290,"Mortality rate, under-5 (per 1,000)"
+291,Natural gas rents (% of GDP)
+292,Net barter terms of trade index (2000 = 100)
+293,"Net enrolment rate, primary, both sexes (%)"
+294,"Net enrolment rate, secondary, both sexes (%)"
+295,"Net incurrence of liabilities, domestic (% of GDP)"
+296,"Net incurrence of liabilities, foreign (% of GDP)"
+297,"Net intake rate to Grade 1 of primary education, both sexes (%)"
+298,"New business density (new registrations per 1,000 people ages 15-64)"
+299,"Nurses and midwives (per 1,000 people)"
+300,Official entrance age to lower secondary education (years)
+301,Official entrance age to primary education (years)
+302,Oil rents (% of GDP)
+303,Ores and metals exports (% of merchandise exports)
+304,Ores and metals imports (% of merchandise imports)
+305,Other expense (% of expense)
+306,Other manufacturing (% of value added in manufacturing)
+307,Other taxes payable by businesses (% of commercial profits)
+308,Out-of-pocket health expenditure (% of private expenditure on health)
+309,Out-of-pocket health expenditure (% of total expenditure on health)
+310,"Out-of-school children of primary school age, both sexes (number)"
+311,"Part time employment, total (% of total employment)"
+312,Percentage of enrolment in primary education in private institutions (%)
+313,Percentage of enrolment in secondary education in private institutions (%)
+314,"Percentage of repeaters in primary education, all grades, both sexes (%)"
+315,"Percentage of repeaters in secondary general education, all grades, both sexes (%)"
+316,Permanent cropland (% of land area)
+317,"Personal remittances, received (% of GDP)"
+318,"Point-of-sale terminals (per 100,000 adults)"
+319,Population ages 65 and above (% of total)
+320,Population density (people per sq. km of land area)
+321,Population growth (annual %)
+322,Population in largest city
+323,Population in the largest city (% of urban population)
+324,Population in urban agglomerations of more than 1 million (% of total population)
+325,Population living in areas where elevation is below 5 meters (% of total population)
+326,"Population, ages 0-14 (% of total)"
+327,"Population, ages 15-64 (% of total)"
+328,Price level ratio of PPP conversion factor (GDP) to market exchange rate
+329,"Primary completion rate, both sexes (%)"
+330,"Primary to secondary general education transition rate, both sexes (%)"
+331,Private credit bureau coverage (% of adults)
+332,Procedures to build a warehouse (number)
+333,Procedures to register property (number)
+334,Profit tax (% of commercial profits)
+335,Proportion of seats held by women in national parliaments (%)
+336,Public credit registry coverage (% of adults)
+337,Pump price for diesel fuel (US$ per liter)
+338,Pump price for gasoline (US$ per liter)
+339,Pupil-teacher ratio in primary education (headcount basis)
+340,Pupil-teacher ratio in secondary education (headcount basis)
+341,"Quality of port infrastructure, WEF (1=extremely underdeveloped to 7=well developed and efficient by international standards)"
+342,Rail lines (total route-km)
+343,"Railways, goods transported (million ton-km)"
+344,"Railways, passengers carried (million passenger-km)"
+345,Real effective exchange rate index (2010 = 100)
+346,Real interest rate (%)
+347,Renewable electricity output (% of total electricity output)
+348,Renewable energy consumption (% of total final energy consumption)
+349,Renewable internal freshwater resources per capita (cubic meters)
+350,"Renewable internal freshwater resources, total (billion cubic meters)"
+351,Research and development expenditure (% of GDP)
+352,Researchers in R&D (per million people)
+353,"Revenue, excluding grants (% of GDP)"
+354,"Risk premium on lending (lending rate minus treasury bill rate, %)"
+355,Rural population (% of total population)
+356,Rural population growth (annual %)
+357,S&P Global Equity Indices (annual % change)
+358,Scientific and technical journal articles
+359,"Self-employed, total (% of total employed)"
+360,"Services, etc., value added (% of GDP)"
+361,"Services, etc., value added (annual % growth)"
+362,"Services, etc., value added (constant 2005 US$)"
+363,"Share of tariff lines with international peaks, all products (%)"
+364,"Share of tariff lines with international peaks, manufactured products (%)"
+365,"Share of tariff lines with international peaks, primary products (%)"
+366,"Share of tariff lines with specific rates, all products (%)"
+367,"Share of tariff lines with specific rates, manufactured products (%)"
+368,"Share of tariff lines with specific rates, primary products (%)"
+369,Share of women in wage employment in the nonagricultural sector (% of total nonagricultural employment)
+370,"Share of youth not in education, employment, or training, total (% of youth population)"
+371,Social contributions (% of revenue)
+372,Start-up procedures to register a business (number)
+373,"Stocks traded, total value (% of GDP)"
+374,"Stocks traded, turnover ratio of domestic shares (%)"
+375,Strength of legal rights index (0=weak to 12=strong)
+376,Subsidies and other transfers (% of expense)
+377,"Survey mean consumption or income per capita, bottom 40% of population (2011 PPP $ per day)"
+378,"Survey mean consumption or income per capita, total population (2011 PPP $ per day)"
+379,"Survival rate to Grade 5 of primary education, both sexes (%)"
+380,"Survival rate to the last grade of primary education, both sexes (%)"
+381,"Tariff rate, applied, simple mean, all products (%)"
+382,"Tariff rate, applied, simple mean, manufactured products (%)"
+383,"Tariff rate, applied, simple mean, primary products (%)"
+384,"Tariff rate, applied, weighted mean, all products (%)"
+385,"Tariff rate, applied, weighted mean, manufactured products (%)"
+386,"Tariff rate, applied, weighted mean, primary products (%)"
+387,"Tariff rate, most favored nation, simple mean, all products (%)"
+388,"Tariff rate, most favored nation, simple mean, manufactured products (%)"
+389,"Tariff rate, most favored nation, simple mean, primary products (%)"
+390,"Tariff rate, most favored nation, weighted mean, all products (%)"
+391,"Tariff rate, most favored nation, weighted mean, manufactured products (%)"
+392,"Tariff rate, most favored nation, weighted mean, primary products (%)"
+393,Tax payments (number)
+394,Tax revenue (% of GDP)
+395,Taxes on goods and services (% of revenue)
+396,Taxes on goods and services (% value added of industry and services)
+397,"Taxes on income, profits and capital gains (% of revenue)"
+398,"Taxes on income, profits and capital gains (% of total taxes)"
+399,Taxes on international trade (% of revenue)
+400,"Teachers in primary education, both sexes (number)"
+401,"Teachers in secondary education, both sexes (number)"
+402,Technicians in R&D (per million people)
+403,Terrestrial and marine protected areas (% of total territorial area)
+404,Terrestrial protected areas (% of total land area)
+405,Textiles and clothing (% of value added in manufacturing)
+406,Theoretical duration of primary education (years)
+407,Theoretical duration of secondary education (years)
+408,Time required to build a warehouse (days)
+409,Time required to enforce a contract (days)
+410,Time required to get electricity (days)
+411,Time required to register property (days)
+412,Time required to start a business (days)
+413,Time spent dealing with the requirements of government regulations (% of senior management time)
+414,Time to export (days)
+415,Time to import (days)
+416,Time to prepare and pay taxes (hours)
+417,Time to resolve insolvency (years)
+418,Total natural resources rents (% of GDP)
+419,Total reserves in months of imports
+420,Total tax rate (% of commercial profits)
+421,Trade (% of GDP)
+422,Trade in services (% of GDP)
+423,Transport services (% of commercial service exports)
+424,Transport services (% of commercial service imports)
+425,"Transport services (% of service exports, BoP)"
+426,"Transport services (% of service imports, BoP)"
+427,Travel services (% of commercial service exports)
+428,Travel services (% of commercial service imports)
+429,"Travel services (% of service exports, BoP)"
+430,"Travel services (% of service imports, BoP)"
+431,"Unemployment, total (% of total labor force)"
+432,Unmet need for contraception (% of married women ages 15-49)
+433,Urban population (% of total)
+434,Urban population growth (annual %)
+435,"Vulnerable employment, total (% of total employment)"
+436,"Wage and salaried workers, total (% of total employed)"
+437,Wholesale price index (2010 = 100)
+438,"Youth literacy rate, population 15-24 years, both sexes (%)"

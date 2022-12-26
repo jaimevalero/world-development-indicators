@@ -18,7 +18,7 @@ import shap
 from sklearn.ensemble import RandomForestRegressor,GradientBoostingClassifier
 import xgboost as xgb
 
-
+NUM_OF_FEATURES_TO_PLOT=20
 
 def get_preprocessed_df() -> pd.DataFrame :
     df = pd.read_csv("data/df_all.csv")
@@ -27,8 +27,30 @@ def get_preprocessed_df() -> pd.DataFrame :
     df =  df.dropna(axis=1, how='all')
     return df
 
+import math
+def get_enriched_estimation_to_explain(country,feature_importances) -> pd.Series : 
+    """ Get the estimation to be displayes, then fill then NaN with average values"""
+    logger.info(f"calculating enriched estimation {country}" )
+    average_values = get_average_values()
+    df_to_explain =  get_preprocessed_df()
+    serie_to_explain = df_to_explain.query( " `Country Code` == @country ").iloc[-2][feature_importances]
+    for index,value in serie_to_explain.items() : 
+        if math.isnan(value) :
+            serie_to_explain[index] =  average_values[index] 
+    return serie_to_explain
 
-
+def get_average_values() ->dict :
+    """ Return a dictionaty of average values"""
+    df = get_preprocessed_df()
+    COLUMNS_TO_REMOVE = ['Unnamed: 0',"Year", 'Country Code']
+    for column in COLUMNS_TO_REMOVE: 
+        if column in df.columns :
+                del df[column]    
+    # df = df[df[target].notna()]
+    # Remove columns with all 0s
+    df =  df.dropna(axis=1, how='all')
+    average_values = df.mean(axis=0).to_dict()
+    return average_values
 
 def process_df_target(target):
     """ Generate df for a given target"""
@@ -61,7 +83,7 @@ def generate_feature_importance_images(target, X_train, X_test, Y_train, Y_test)
 
 
     feature_importances = pd.Series(clf.feature_importances_, index=X_train.columns)
-    NUM_OF_FEATURES_TO_PLOT=12
+    
 
     feature_importances= feature_importances[feature_importances!=0].sort_values(ascending=False)[:NUM_OF_FEATURES_TO_PLOT].sort_values()
 
@@ -76,14 +98,18 @@ def generate_feature_importance_images(target, X_train, X_test, Y_train, Y_test)
     #plt.show()
 
     plt.savefig(f'images/feature_importances/{target}.png')
+    plt.close()
     return clf,feature_importances
 
 
-TARGETS =  [ "GDP per capita (constant LCU)" ,
+TARGETS =  [ "Birth rate, crude (per 1,000 people)",
+    "Unemployment, total (% of total labor force) (modeled ILO estimate)", 
+ "GDP per capita (constant LCU)" ,
  "Inflation, consumer prices (annual %)" ,
  "Self-employed, total (% of total employment) (modeled ILO estimate)" ,
- "Unemployment, total (% of total labor force) (modeled ILO estimate)" ]
+  ]
 
+country="ESP"
 
 for target in TARGETS : 
     df = process_df_target(target)
@@ -95,21 +121,12 @@ for target in TARGETS :
    
     clf,feature_importances = generate_feature_importance_images(target, X_train, X_test, Y_train, Y_test)
 
-    #shap.initjs()
-    #explainer = shap.TreeExplainer(clf) 
-    #shap_values = explainer.shap_values(X_train)
-    #shap.force_plot(explainer.expected_value[0])   
-    #shap.summary_plot(shap_values, X_test) 
-    
-    # clf0 =  RandomForestRegressor(max_depth=2, random_state=0)
-    # clf0.fit(X_train,Y_train)
-    # shap.initjs()
-    # explainer = shap.TreeExplainer(clf0)
-    # a = 0
-
 
 
     features_to_consider = list(feature_importances.to_dict().keys())
+
+    serie_to_explain = get_enriched_estimation_to_explain(country,features_to_consider)
+
     features_to_consider.append(target)
     df_feature_importances = process_df_target(target)[features_to_consider]
     Xtrain = df_feature_importances.drop(columns=target,axis=1)
@@ -120,12 +137,28 @@ for target in TARGETS :
     shap.initjs()
     explainer = shap.TreeExplainer(clf) 
     shap_values = explainer.shap_values(X_train)
-    #shap.force_plot(explainer.expected_value, shap_values[0,:],  X_train.iloc[0,:])
-    shap.force_plot(explainer.expected_value, shap_values[0,:],  
-        X_train.iloc[0,:],
-        matplotlib=True, 
-        show=False
-        title=target)
-    plt.savefig('force_plot.png')
 
-    a =0 
+    #clf.predict(serie_to_explain)
+    clf_expected_value = clf.predict(pd.DataFrame([serie_to_explain.to_dict()]))    
+    shap_values = explainer.shap_values(pd.DataFrame([serie_to_explain.to_dict()]))
+
+    shap.decision_plot(explainer.expected_value, 
+            shap_values[0,:],serie_to_explain,  highlight=0, title=target,
+            feature_names = np.array (serie_to_explain.index),
+            auto_size_plot=True, link = "identity",
+            feature_display_range=slice(None, -1 * NUM_OF_FEATURES_TO_PLOT, -1 )) 
+    a = 0   
+# shap.decision_plot(explainer.expected_value, 
+#         shap_values[0,:],X_train.iloc[0,:],  highlight=0, title=target,
+#         feature_names = np.array (X_train.iloc[0,:].index),
+#         auto_size_plot=True, link = "identity",
+#         feature_display_range=slice(None, -1 * NUM_OF_FEATURES_TO_PLOT, -1 )) 
+        
+plt.title(target)
+plt.show()
+
+
+force_plot_html = shap.force_plot(explainer.expected_value, shap_values[0,:], X_train.iloc[0,:]).html()
+shap_html = f"<head>{shap.getjs()}</head><body>{force_plot_html}</body>"
+
+

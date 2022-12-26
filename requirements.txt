@@ -12,3 +12,4 @@ shap
 loguru
 xgboost
 ipython
+statsmodels

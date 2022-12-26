@@ -1,9 +1,9 @@
 import pandas as pd
+from loguru import logger
 
 from tqdm import tqdm                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
-
-
+import postprocess
 def get_original_data() -> pd.DataFrame:
     df = pd.read_csv("data/WDIData.csv")
     return df
@@ -54,6 +54,12 @@ def generate_trasversed_data() -> pd.DataFrame :
     return df_all.to_csv("data/df_all.csv")
     
 
+logger.info("Start")
 # regenerate data
 df = generate_trasversed_data()
 
+logger.info("generate_dic_features_to_consider")
+postprocess.generate_dic_features_to_consider() 
+logger.info("generate_zone_average_value")
+postprocess.generate_zone_average_value()
+logger.info("End")

@@ -19,23 +19,16 @@ from sklearn.ensemble import RandomForestRegressor,GradientBoostingClassifier
 import xgboost as xgb
 
 import postprocess 
+import constants
 
-NUM_OF_FEATURES_TO_PLOT=20
 
 import math
-
+import model
+import json
+import utils
 
 def generate_feature_importance_images(target, X_train, X_test, Y_train, Y_test):
-    clf = xgb.XGBRegressor(objective ='reg:squarederror', colsample_bytree = 0.3, learning_rate = 0.05,
-                    max_depth = 5, alpha = 10, n_estimators = 300)
-    # fit the model
-    clf.fit(X_train,Y_train)
-
-
-    feature_importances = pd.Series(clf.feature_importances_, index=X_train.columns)
-    
-
-    feature_importances= feature_importances[feature_importances!=0].sort_values(ascending=False)[:NUM_OF_FEATURES_TO_PLOT].sort_values()
+    clf, feature_importances = model.get_feature_importances(X_train, Y_train)
 
     logger.info(f'{target} score: ' + str (clf.score(X_test,Y_test)))
     fig, ax = plt.subplots()
@@ -52,63 +45,76 @@ def generate_feature_importance_images(target, X_train, X_test, Y_train, Y_test)
     return clf,feature_importances
 
 
-TARGETS =  [ "Birth rate, crude (per 1,000 people)",
+
+
+
+TARGETS =  ["Inflation, consumer prices (annual %)",  "Pump price for diesel fuel (US$ per liter)",
+"Birth rate, crude (per 1,000 people)", "Researchers in R&D (per million people)", 
+    "Time required to build a warehouse (days)",
+    "Wage and salaried workers, total (% of total employment) (modeled ILO estimate)","Rural population (% of total population)", 
+  
     "Unemployment, total (% of total labor force) (modeled ILO estimate)", 
  "GDP per capita (constant LCU)" ,
- "Inflation, consumer prices (annual %)" ,
+
  "Self-employed, total (% of total employment) (modeled ILO estimate)" ,
   ]
 
 country="ESP"
+dict_features_to_consider = {}
+try :
+    dict_features_to_consider = postprocess.get_dict_features_to_consider()
+except: pass 
+    
 
 for target in TARGETS : 
     df = postprocess.process_df_target(target)
     logger.info(f"Shape: {df.shape} for:  {target} ")
 
-    Xtrain = df.drop(columns=target,axis=1)
-    Ytrain = df[target]
-    X_train,X_test,Y_train,Y_test = train_test_split(Xtrain,Ytrain,test_size=0.3,random_state=1200)
-   
-    clf,feature_importances = generate_feature_importance_images(target, X_train, X_test, Y_train, Y_test)
+    # Xtrain = df_feature_importances.drop(columns=target,axis=1) if target in df_feature_importances.columns else df_feature_importances
+ 
+    if target in dict_features_to_consider: 
+        features_to_consider = dict_features_to_consider[target]
+    else: 
+        features_to_consider = postprocess.calculate_features_consider( target )
 
 
-
-    features_to_consider = list(feature_importances.to_dict().keys())
-
+    df_feature_importances = postprocess.process_df_target(target)
     serie_to_explain = postprocess.get_enriched_estimation_to_explain(country,features_to_consider)
 
-    features_to_consider.append(target)
-    df_feature_importances = postprocess.process_df_target(target)[features_to_consider]
-    Xtrain = df_feature_importances.drop(columns=target,axis=1)
+   
+    Xtrain = df_feature_importances[features_to_consider]
     Ytrain = df_feature_importances[target]
-    X_train,X_test,Y_train,Y_test = train_test_split(Xtrain,Ytrain,test_size=0.3,random_state=1200)
-    clf,feature_importances = generate_feature_importance_images(target, X_train, X_test, Y_train, Y_test)
+    #X_train,X_test,Y_train,Y_test = train_test_split(Xtrain,Ytrain,test_size=0.3,random_state=1200)
+    clf = model.get_model(Xtrain, Ytrain)
 
+    df_means = pd.read_csv("data/df_means.csv")
+    zone = utils.get_country_data(country)["Region"]
+    df_zone = df_means.query( " `Zone` == @zone ").drop("Zone",axis=1)
+    zone_features = df_zone[features_to_consider].to_dict(orient="records")[0]
     shap.initjs()
     explainer = shap.TreeExplainer(clf) 
-    shap_values = explainer.shap_values(X_train)
+    shap_values = explainer.shap_values(Xtrain)
 
-    #clf.predict(serie_to_explain)
-    clf_expected_value = clf.predict(pd.DataFrame([serie_to_explain.to_dict()]))    
-    shap_values = explainer.shap_values(pd.DataFrame([serie_to_explain.to_dict()]))
+
+    #clf_expected_value = clf.predict(pd.DataFrame([serie_to_explain.to_dict()]))    
+    shap_values = explainer.shap_values(pd.DataFrame([serie_to_explain.to_dict(),zone_features]))
 
     shap.decision_plot(explainer.expected_value, 
-            shap_values[0,:],serie_to_explain,  highlight=0, title=target,
+            shap_values,serie_to_explain,  
+            highlight=0, title=f"Predictors for estimating: {target}, {country}",
             feature_names = np.array (serie_to_explain.index),
+            legend_labels=[country,zone],legend_location='lower right',
             auto_size_plot=True, link = "identity",
-            feature_display_range=slice(None, -1 * NUM_OF_FEATURES_TO_PLOT, -1 )) 
+            feature_display_range=slice(None, -1 * constants.NUM_OF_FEATURES_TO_PLOT, -1 )) 
     a = 0   
-# shap.decision_plot(explainer.expected_value, 
-#         shap_values[0,:],X_train.iloc[0,:],  highlight=0, title=target,
-#         feature_names = np.array (X_train.iloc[0,:].index),
-#         auto_size_plot=True, link = "identity",
-#         feature_display_range=slice(None, -1 * NUM_OF_FEATURES_TO_PLOT, -1 )) 
+
+
         
-plt.title(target)
-plt.show()
+# plt.title(target)
+# plt.show()
 
 
-force_plot_html = shap.force_plot(explainer.expected_value, shap_values[0,:], X_train.iloc[0,:]).html()
-shap_html = f"<head>{shap.getjs()}</head><body>{force_plot_html}</body>"
+# force_plot_html = shap.force_plot(explainer.expected_value, shap_values[0,:], X_train.iloc[0,:]).html()
+# shap_html = f"<head>{shap.getjs()}</head><body>{force_plot_html}</body>"
 
 

@@ -931,9 +931,7 @@ Unemployment, total (% of total labor force) (modeled ILO estimate)
 Unemployment, youth total (% of total labor force ages 15-24) (modeled ILO estimate)
 
 Unmet need for contraception (% of married women ages 15-49)
-Urban land area (sq. km)
-Urban land area where elevation is below 5 meters (% of total land area)
-Urban population (% of total population)
+
 Use of IMF credit (DOD, current US$)
 Use of insecticide-treated bed nets (% of under-5 population)
 Value lost due to electrical outages (% of sales for affected firms)

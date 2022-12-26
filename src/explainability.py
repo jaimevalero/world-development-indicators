@@ -18,62 +18,12 @@ import shap
 from sklearn.ensemble import RandomForestRegressor,GradientBoostingClassifier
 import xgboost as xgb
 
+import postprocess 
+
 NUM_OF_FEATURES_TO_PLOT=20
 
-def get_preprocessed_df() -> pd.DataFrame :
-    df = pd.read_csv("data/df_all.csv")
-    if 'Unnamed: 0' in df.columns :
-        del df["Unnamed: 0"]
-    df =  df.dropna(axis=1, how='all')
-    return df
-
 import math
-def get_enriched_estimation_to_explain(country,feature_importances) -> pd.Series : 
-    """ Get the estimation to be displayes, then fill then NaN with average values"""
-    logger.info(f"calculating enriched estimation {country}" )
-    average_values = get_average_values()
-    df_to_explain =  get_preprocessed_df()
-    serie_to_explain = df_to_explain.query( " `Country Code` == @country ").iloc[-2][feature_importances]
-    for index,value in serie_to_explain.items() : 
-        if math.isnan(value) :
-            serie_to_explain[index] =  average_values[index] 
-    return serie_to_explain
 
-def get_average_values() ->dict :
-    """ Return a dictionaty of average values"""
-    df = get_preprocessed_df()
-    COLUMNS_TO_REMOVE = ['Unnamed: 0',"Year", 'Country Code']
-    for column in COLUMNS_TO_REMOVE: 
-        if column in df.columns :
-                del df[column]    
-    # df = df[df[target].notna()]
-    # Remove columns with all 0s
-    df =  df.dropna(axis=1, how='all')
-    average_values = df.mean(axis=0).to_dict()
-    return average_values
-
-def process_df_target(target):
-    """ Generate df for a given target"""
-    df = get_preprocessed_df()
-
-    COLUMNS_TO_REMOVE = ['Unnamed: 0',"Year", 'Country Code']
-    for column in COLUMNS_TO_REMOVE: 
-        if column in df.columns :
-                del df[column]
-
-    # Remove rowd where target column is NaN
-    df = df[df[target].notna()]
-    # Remove columns with all 0s
-    df =  df.dropna(axis=1, how='all')
-
-    # Move target to last
-    df = df.reindex(columns = [col for col in df.columns if col != target] + [target])
-
-    # Fill with average
-    for column in df.columns : 
-        df[column].fillna(int(df[column].mean()), inplace=True)
-
-    return df
 
 def generate_feature_importance_images(target, X_train, X_test, Y_train, Y_test):
     clf = xgb.XGBRegressor(objective ='reg:squarederror', colsample_bytree = 0.3, learning_rate = 0.05,
@@ -112,7 +62,7 @@ TARGETS =  [ "Birth rate, crude (per 1,000 people)",
 country="ESP"
 
 for target in TARGETS : 
-    df = process_df_target(target)
+    df = postprocess.process_df_target(target)
     logger.info(f"Shape: {df.shape} for:  {target} ")
 
     Xtrain = df.drop(columns=target,axis=1)
@@ -125,10 +75,10 @@ for target in TARGETS :
 
     features_to_consider = list(feature_importances.to_dict().keys())
 
-    serie_to_explain = get_enriched_estimation_to_explain(country,features_to_consider)
+    serie_to_explain = postprocess.get_enriched_estimation_to_explain(country,features_to_consider)
 
     features_to_consider.append(target)
-    df_feature_importances = process_df_target(target)[features_to_consider]
+    df_feature_importances = postprocess.process_df_target(target)[features_to_consider]
     Xtrain = df_feature_importances.drop(columns=target,axis=1)
     Ytrain = df_feature_importances[target]
     X_train,X_test,Y_train,Y_test = train_test_split(Xtrain,Ytrain,test_size=0.3,random_state=1200)
